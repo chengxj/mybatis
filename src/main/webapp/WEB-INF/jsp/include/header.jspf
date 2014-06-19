@@ -1,9 +1,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>demo</title>
-
-  </head>
-<body>
+<!DOCTYPE html >
+<html>
+<head ng-app="${ngApp}">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/docs.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">    
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/angular-resource.min.js"></script>
+</head>
+<c:choose>
+  <c:when test="${not empty ngController}"><body ng-controller="${ngController}"></c:when>
+  <c:otherwise><body></c:otherwise>
+</c:choose>

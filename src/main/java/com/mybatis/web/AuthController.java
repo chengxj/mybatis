@@ -12,8 +12,8 @@ public class AuthController {
 	@Autowired
 	private ActivitiesService activitiesService;
 
-	@RequestMapping(value = "/test")
-	public String stockAuth(Model model) {
+	@RequestMapping(value = "/")
+	public String indexAuth(Model model) {
 		model.addAttribute("activities", activitiesService.getActivities());
 		return "index";
 	}

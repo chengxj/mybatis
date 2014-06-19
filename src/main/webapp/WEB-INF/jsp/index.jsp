@@ -1,7 +1,8 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="include/global.jspf" %>
 <%@include file="include/header.jspf" %>
-<table>
+<%@ page language="java" contentType="text/html; UTF-8" pageEncoding="UTF-8"%>
+<c:set var="ngApp" value="app"/>
+<c:set var="ngController" value="ctrl"/>
+<table border=1>
 <tr>
 <td>${activities.id}</td>
 <td>${activities.title}</td>
