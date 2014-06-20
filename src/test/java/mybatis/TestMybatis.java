@@ -10,7 +10,7 @@ import com.mybatis.model.Activities;
 import com.mybatis.service.ActivitiesService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:WEB-INF/spring/root-context.xml")
+@ContextConfiguration(locations = "classpath:/WEB-INF/spring/root-context.xml")
 public class TestMybatis {
 
 	private static final Logger logger = Logger.getLogger(TestMybatis.class);

@@ -9,7 +9,7 @@ import com.mybatis.model.Activities;
 @Service
 public class ActivitiesService {
 	
-	@Autowired
+	
 	private ActivitiesMapper activitiesMapper;
 	
 	public Activities getActivities() {
@@ -17,4 +17,19 @@ public class ActivitiesService {
 		return activities;
 	}
 
+	/**
+	 * @return the activitiesMapper
+	 */
+	public ActivitiesMapper getActivitiesMapper() {
+		return activitiesMapper;
+	}
+
+	/**
+	 * @param activitiesMapper the activitiesMapper to set
+	 */
+	@Autowired
+	public void setActivitiesMapper(ActivitiesMapper activitiesMapper) {
+		this.activitiesMapper = activitiesMapper;
+	}
+	
 }

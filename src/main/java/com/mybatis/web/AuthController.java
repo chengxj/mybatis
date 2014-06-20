@@ -9,13 +9,27 @@ import com.mybatis.service.ActivitiesService;
 @Controller
 public class AuthController {
 	
-	@Autowired
 	private ActivitiesService activitiesService;
 
 	@RequestMapping(value = "/")
-	public String indexAuth(Model model) {
+	public String stockAuth(Model model) {
 		model.addAttribute("activities", activitiesService.getActivities());
 		return "index";
+	}
+
+	/**
+	 * @return the activitiesService
+	 */
+	public ActivitiesService getActivitiesService() {
+		return activitiesService;
+	}
+
+	/**
+	 * @param activitiesService the activitiesService to set
+	 */
+	@Autowired
+	public void setActivitiesService(ActivitiesService activitiesService) {
+		this.activitiesService = activitiesService;
 	}
 
 }
